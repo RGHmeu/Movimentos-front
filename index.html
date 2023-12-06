@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>MVP</title>
+</head>
+
+<body>
+     <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h3>Exercícios Físicos</h3>
+        </div>
+
+        <div class="banner">
+        <img src="img/academiaVirtual.jpg?width=1200&height=630&fit=crop" 
+                alt "Acadeia-Virtual" >
+        </div>
+
+    </header>
+
+    <!-- Opções para adicionar um novo item -->
+    <section class="newItem">
+        <input type="text" id="newCodigo" placeholder="Código">
+        <input type="text" id="newDescr" placeholder="Descrição">
+        <input type="text" id="newFoco" placeholder="Foco">
+        <input type="text" id="newTipo" placeholder="Tipo">
+        <span onclick="newItem()" class="addBtn">Incluir</span>
+    </section>
+
+    <!-- Filtros da listagem -->
+    <section class="filtros">
+        Filtro do conteúdo da Lista de Movimentos: &nbsp;
+            <tr> 
+                <select name="Tipo-de-Trabalho" id="tipo-selecionado" onChange="filtrar()">
+                    <option value="Todos" selected>Todos</option>
+                    <option value="Musculacao">Musculação</option>                    
+                    <option value="Aquecimento">Aquecimento</option>                    
+                    <option value="Alongamento">Alongamento</option>
+                    <option value="Aerobica">Aeróbica</option>
+                    <option value="Combinado">Combinado</option>
+                </select>
+            </tr>         
+    </section>
+    <br>
+
+   <!-- Mostrar vídeo -->
+   <section class="video">
+        <form onchange="mostrar()">
+            <input type="text" id="mostravideo" name="Mostrar" value="">
+            <span id="aqui"></span>
+        </form>
+   </section>
+
+    <!-- Tabela com items existentes -->
+    <section class="items"> 
+        <table id="myTable">
+            <tr>
+                <th id="codigo">Código</th>
+                <th id="descr">Descr</th>
+                <th id="foco">Foco</th>
+                <th id="tipo">Tipo</th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+            </tr>
+        </table>
+        
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+<!-- <video src="img/Agaxa001.mkv" width="240" height="200" controls="controls" autoplay muted ></video> -->
+</html>
+
+
